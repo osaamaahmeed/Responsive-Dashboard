@@ -11,13 +11,17 @@ class Assets {
 
   static const String avatar3 = "assets/images/avatar3.svg";
 
+  static const String gallary = "assets/images/gallery.svg";
+
+  static const String cardBackgroundPNG = "assets/images/cardBackground.png";
+
   /// Assets for imagesBalance
   /// assets/images/balance.svg
   static const String balance = "assets/images/balance.svg";
 
   /// Assets for imagesCardBackground
   /// assets/images/card_background.svg
-  static const String cardBackground = "assets/images/card_background.svg";
+  static const String cardBackground = "assets/images/cardBackground.svg";
 
   /// Assets for imagesDashboard
   /// assets/images/dashboard.svg
