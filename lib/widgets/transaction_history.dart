@@ -13,7 +13,7 @@ class TransactionHistory extends StatelessWidget {
       children: [
         const TransactionHistoryHeader(),
         const SizedBox(height: 20,),
-        Text("15 Nov 2025", style: AppStyles.styleMedium16.copyWith(color: Color(0xFFAAAAAA)),),
+        Text("15 Nov 2025", style: AppStyles.styleMedium16(context).copyWith(color: Color(0xFFAAAAAA)),),
         const SizedBox(height: 16,),
         const TransactionHistoryListView(),
       ],

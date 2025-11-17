@@ -14,9 +14,9 @@ class TransactionItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: ListTile(
-        title: Text(transactionModel.title, style:AppStyles.styleSemiBold16 ,),
-        subtitle: Text(transactionModel.date, style: AppStyles.styleRegular16.copyWith(color: Color(0xFFAAAAAA)),),
-        trailing: Text(transactionModel.amount, style: AppStyles.styleSemiBold20.copyWith( color: transactionModel.isWithDrawal ? Color(0xFFF3735E) : Color(0xFF7DD97B)),),
+        title: Text(transactionModel.title, style:AppStyles.styleSemiBold16(context) ,),
+        subtitle: Text(transactionModel.date, style: AppStyles.styleRegular16(context).copyWith(color: Color(0xFFAAAAAA)),),
+        trailing: Text(transactionModel.amount, style: AppStyles.styleSemiBold20(context).copyWith( color: transactionModel.isWithDrawal ? Color(0xFFF3735E) : Color(0xFF7DD97B)),),
       ),
     );
   }
