@@ -25,7 +25,7 @@ class IncomeDetials extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: items.map( (e) => IncomeDetialsItem(itemDetialsModel: e)).toList(),
+      children: items.map( (e) => Padding(padding: EdgeInsets.only(left: 5, bottom: 5), child: IncomeDetialsItem(itemDetialsModel: e))).toList(),
     );
   }
 }

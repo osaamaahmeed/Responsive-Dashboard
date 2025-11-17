@@ -7,11 +7,12 @@ class AllExpensesItemsListView extends StatefulWidget {
   const AllExpensesItemsListView({super.key});
 
   @override
-  State<AllExpensesItemsListView> createState() => _AllExpensesItemsListViewState();
+  State<AllExpensesItemsListView> createState() =>
+      _AllExpensesItemsListViewState();
 }
 
 class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
-    final items = [
+  final items = [
     AllExpensesItemModel(
       image: Assets.balance,
       title: "Balance",
@@ -36,34 +37,49 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      // children: items.map((e) => Expanded(child: AllExpensesItem(itemModel: e))).toList(),
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              updateIndex(index);
+              updateIndex(0);
             },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpensesItem(itemModel: item, selected: selectedIndex == index,),
+            child: AllExpensesItem(
+              itemModel: items[0],
+              selected: selectedIndex == 0,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        SizedBox(width: 8,),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensesItem(
+              itemModel: items[1],
+              selected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        SizedBox(width: 8,),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensesItem(
+              itemModel: items[2],
+              selected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
-    // return ListView.builder(
-    //   itemBuilder: (context, index) {
-    //     return AllExpensesItem(itemModel: items[index]);
-    //   },
-    //   scrollDirection: Axis.horizontal,
-    //   itemCount: items.length,
-    //   shrinkWrap: true,
-    // );
   }
-  
-  void updateIndex(int index) {setState(() {
-    selectedIndex = index;
-  });}
+
+  void updateIndex(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
 }

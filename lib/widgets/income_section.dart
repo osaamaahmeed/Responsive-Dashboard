@@ -13,7 +13,7 @@ class IncomeSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const IncomeSectionHeader(),
-          IncomeSectionBody(),
+          const IncomeSectionBody(),
         ],
       ),
     );

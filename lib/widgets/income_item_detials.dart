@@ -7,20 +7,20 @@ class IncomeDetialsItem extends StatelessWidget {
   final ItemDetialsModel itemDetialsModel;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Container(
-        width: 12,
-        height: 12,
-        decoration: ShapeDecoration(
-          shape: OvalBorder(),
-          color: itemDetialsModel.color,
+    return Row(
+      children: [
+        Container(
+          width: 12,
+          height: 12,
+          decoration: ShapeDecoration(shape: OvalBorder(), color: itemDetialsModel.color),
         ),
-      ),
-      title: Text(itemDetialsModel.title, style: AppStyles.styleRegular16(context)),
-      trailing: Text(
+        const SizedBox(width: 10,),
+        Expanded(child: Text(itemDetialsModel.title, style: AppStyles.styleRegular16(context))),
+        Text(
         itemDetialsModel.value,
         style: AppStyles.styleMedium16(context).copyWith(color: Color(0xFF208CC8)),
       ),
+      ],
     );
   }
 }
